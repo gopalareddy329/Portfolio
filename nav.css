@@ -1,0 +1,117 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+nav{
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+}
+nav .mainMenu{
+
+    display: flex;
+    list-style: none;
+    margin: 0;
+}
+
+nav .mainMenu li a{
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+nav .mainMenu li a:hover{
+    background-color: white;
+    color: #000;
+}
+nav .logo{
+    font-size: 2.5rem;
+    cursor: pointer;
+    font-family: 'Alkalami', serif;
+}
+nav .openMenu{
+    font-size: 1.8rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+nav .mainMenu .closeMenu{
+        font-size: 2rem;
+        display: none;
+        cursor: pointer;
+}
+.mainMenu .active{
+    
+    background-color: rgb(246, 1, 74);
+    
+}
+#scrolltop{
+   position: fixed;
+    z-index: 100;
+    top:80%;
+    margin-left: 95%;
+    display: none;
+}
+#scrolltop img{
+    width: 50%;
+}
+@media(max-width:800px){
+
+    nav{
+        width: 100%;
+    }
+    nav .mainMenu{
+        height: 100vh;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: rgb(0, 0, 0);
+        transition: top 1s ease 0s;
+        display: none;
+        
+    }
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+      }
+      nav .openMenu {
+        display: block;
+      }
+      nav .mainMenu li a:hover {
+        background: none;
+        color: rgb(255, 123, 0);
+      }
+      #scrolltop{
+        top:90%;
+        right: 2%;
+        width: 10%;
+      }
+      #scrolltop img{
+        width: 70%;
+
+    }
+}
